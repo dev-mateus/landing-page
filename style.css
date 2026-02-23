@@ -99,8 +99,8 @@ body {
 
 .logo {
     display: flex;
-    align-items: baseline;
-    gap: 4px;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
     font-weight: 800;
     font-size: 24px;
@@ -110,6 +110,12 @@ body {
 
 .logo:hover {
     color: var(--primary);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
 }
 
 .logo-text {
@@ -1118,12 +1124,18 @@ section {
 
 .footer-logo {
     display: flex;
-    align-items: baseline;
-    gap: 4px;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
     font-weight: 800;
     font-size: 24px;
     margin-bottom: 16px;
+}
+
+.footer-logo .logo-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
 }
 
 .footer-logo .logo-text {

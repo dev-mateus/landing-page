@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- Hexágono externo com contorno -->
+  <path d="M 70 40 L 130 30 L 160 70 L 150 130 L 90 160 L 40 130 Z" fill="none" stroke="#6366f1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Seta superior direita (aponta para diagonal) -->
+  <polygon points="120 70 140 55 130 85" fill="#6366f1"/>
+  
+  <!-- Seta inferior esquerda (aponta para diagonal) -->
+  <polygon points="85 130 105 120 95 145" fill="#6366f1"/>
+  
+  <!-- Triângulo central superior (movimento) -->
+  <polygon points="100 80 115 95 100 100" fill="#6366f1" opacity="0.8"/>
+</svg>

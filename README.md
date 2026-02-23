@@ -230,7 +230,7 @@ Este projeto é de uso livre para fins comerciais e pessoais.
 
 ---
 
-**Desenvolvido com 💜 por Mateus Dev**
+**Desenvolvido com 💜 por MNG Tech**
 
 ## 🔥 Próximos Passos
 
