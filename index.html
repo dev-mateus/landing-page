@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Desenvolvimento de Landing Pages de alta conversão e Sistemas de Agendamento para Saúde e Setor Jurídico. Soluções digitais que geram resultados. React, TypeScript, Python, Django.">
+    <meta name="keywords" content="landing page, sistema agendamento, saúde, jurídico, desenvolvedor web, TypeScript, React, Python, Django, web design">
+    <meta name="author" content="Mateus">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mateus Dev - Landing Pages & Sistemas de Agendamento">
+    <meta property="og:description" content="Soluções digitais profissionais para seu negócio. Landing pages de alta conversão e sistemas de agendamento para saúde e jurídico.">
+    <meta property="og:site_name" content="Mateus Dev">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mateus Dev - Desenvolvimento Web">
+    <meta name="twitter:description" content="Landing Pages & Sistemas de Agendamento para Saúde e Jurídico">
+    <title>Mateus Dev - Landing Pages & Sistemas de Agendamento | Desenvolvedor Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="logo">
+                        <span class="logo-text">Mateus</span>
+                        <span class="logo-subtitle">Dev</span>
+                    </a>
+                    <div class="nav-menu" id="navMenu">
+                        <a href="#home" class="nav-link">Início</a>
+                        <a href="#servicos" class="nav-link">Serviços</a>
+                        <a href="#sobre" class="nav-link">Sobre</a>
+                        <a href="#contato" class="nav-link nav-link-cta">Contato</a>
+                    </div>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Transformo suas ideias em 
+                        <span class="highlight">soluções digitais</span>
+                    </h1>
+                    <p class="hero-description">
+                        Desenvolvimento de landing pages de alta conversão e sistemas de agendamento 
+                        personalizados para os setores de saúde e jurídico. Tecnologia que gera resultados.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contato" class="btn btn-primary" role="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            Iniciar Projeto Agora
+                        </a>
+                        <a href="#servicos" class="btn btn-secondary" role="button">Explorar Serviços</a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="hero-trust-badges">
+                        <div class="trust-badge">
+                            <span class="badge-icon">✓</span>
+                            <span class="badge-text">Resposta em 24h</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="badge-icon">✓</span>
+                            <span class="badge-text">100% LGPD</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="badge-icon">✓</span>
+                            <span class="badge-text">Suporte Dedicado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">O que eu faço</span>
+                <h2 class="section-title">Serviços Especializados</h2>
+                <p class="section-description">
+                    Soluções completas e personalizadas para o seu negócio digital
+                </p>
+            </div>
+
+            <div class="servicos-grid">
+                <!-- Landing Pages -->
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-title">Landing Pages de Alto Impacto</h3>
+                    <p class="servico-description">
+                        Criação de páginas otimizadas para conversão, com design moderno, 
+                        responsivo e focado em resultados. SEO otimizado e performance garantida.
+                    </p>
+                    <ul class="servico-features">
+                        <li>Design responsivo e moderno</li>
+                        <li>Otimização para conversão</li>
+                        <li>SEO e performance</li>
+                        <li>Integração com ferramentas</li>
+                    </ul>
+                    <a href="#contato" class="servico-link">Solicitar orçamento →</a>
+                </div>
+
+                <!-- Sistema Saúde -->
+                <div class="servico-card featured">
+                    <div class="servico-badge">Mais Popular</div>
+                    <div class="servico-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-title">Sistema de Agendamento - Saúde</h3>
+                    <p class="servico-description">
+                        Plataforma completa para gestão de consultas médicas, com controle de 
+                        pacientes, prontuários eletrônicos e lembretes automáticos.
+                    </p>
+                    <ul class="servico-features">
+                        <li>Agendamento online 24/7</li>
+                        <li>Gestão de pacientes</li>
+                        <li>Prontuário eletrônico</li>
+                        <li>Lembretes por WhatsApp/Email</li>
+                        <li>Relatórios e dashboard</li>
+                        <li>Conformidade com LGPD</li>
+                    </ul>
+                    <a href="#contato" class="servico-link">Quero conhecer →</a>
+                </div>
+
+                <!-- Sistema Jurídico -->
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-title">Sistema de Agendamento - Jurídico</h3>
+                    <p class="servico-description">
+                        Solução especializada para escritórios de advocacia, com gestão de 
+                        clientes, processos, audiências e deadlines.
+                    </p>
+                    <ul class="servico-features">
+                        <li>Agenda de audiências</li>
+                        <li>Gestão de clientes e processos</li>
+                        <li>Controle de prazos</li>
+                        <li>Alertas automáticos</li>
+                        <li>Documentos seguros</li>
+                    </ul>
+                    <a href="#contato" class="servico-link">Saber mais →</a>
+                </div>
+
+                <!-- Desenvolvimento Personalizado -->
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-title">Desenvolvimento Sob Medida</h3>
+                    <p class="servico-description">
+                        Desenvolvimento de aplicações web e mobile personalizadas, do planejamento 
+                        ao deploy, com tecnologias modernas.
+                    </p>
+                    <ul class="servico-features">
+                        <li>React e TypeScript</li>
+                        <li>Python e Django</li>
+                        <li>APIs REST</li>
+                        <li>Deploy e manutenção</li>
+                    </ul>
+                    <a href="#contato" class="servico-link">Conversar →</a>
+                </div>
+
+                <!-- E-commerce / Loja Virtual -->
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-title">E-commerce & Loja Virtual</h3>
+                    <p class="servico-description">
+                        Plataforma completa de vendas online com carrinho, pagamentos integrados, 
+                        gestão de estoque e painel administrativo.
+                    </p>
+                    <ul class="servico-features">
+                        <li>Catálogo de produtos</li>
+                        <li>Carrinho e checkout</li>
+                        <li>Integração de pagamento</li>
+                        <li>Painel admin completo</li>
+                        <li>Gestão de pedidos</li>
+                    </ul>
+                    <a href="#contato" class="servico-link">Criar loja →</a>
+                </div>
+
+                <!-- Consultoria Técnica -->
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-title">Consultoria & Arquitetura</h3>
+                    <p class="servico-description">
+                        Análise técnica, escolha de tecnologias, arquitetura de sistemas e 
+                        otimização de projetos existentes.
+                    </p>
+                    <ul class="servico-features">
+                        <li>Análise de requisitos</li>
+                        <li>Escolha de stack</li>
+                        <li>Otimização de código</li>
+                        <li>Melhoria de performance</li>
+                        <li>Code review</li>
+                    </ul>
+                    <a href="#contato" class="servico-link">Agendar consultoria →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <span class="section-badge">Sobre mim</span>
+                    <h2 class="section-title">Desenvolvimento com foco em soluções práticas e resultados</h2>
+                    <p class="sobre-description">
+                        Trabalho com desenvolvimento de soluções digitais que realmente funcionam. 
+                        Especializado em React, TypeScript, Python e Django, utilizo tecnologias 
+                        modernas e confiáveis para entregar projetos de qualidade.
+                    </p>
+                    <p class="sobre-description">
+                        Meu objetivo é transformar suas necessidades em sistemas funcionais e landing 
+                        pages que convertem. Do planejamento estratégico ao deploy final, cada projeto 
+                        é desenvolvido com atenção aos detalhes e foco em performance.
+                    </p>
+                </div>
+
+                <div class="sobre-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                            </svg>
+                        </div>
+                        <h4 class="stat-card-title">Qualidade</h4>
+                        <p class="stat-card-text">Código limpo e boas práticas</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h4 class="stat-card-title">Performance</h4>
+                        <p class="stat-card-text">Sites rápidos e otimizados</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h4 class="stat-card-title">Responsivo</h4>
+                        <p class="stat-card-text">Funciona em todos dispositivos</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="stat-card-title">Prazo</h4>
+                        <p class="stat-card-text">Entrega dentro do combinado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="contato-wrapper">
+                <div class="contato-info">
+                    <span class="section-badge">Vamos conversar</span>
+                    <h2 class="section-title">Pronto para começar seu projeto?</h2>
+                    <p class="contato-description">
+                        Entre em contato e vamos transformar sua ideia em realidade. 
+                        Respondo rapidamente e estou sempre disponível para novos desafios.
+                    </p>
+
+                    <div class="contato-methods">
+                        <div class="contato-method">
+                            <div class="method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <h4 class="method-title">Email</h4>
+                                <a href="mailto:mateus-ppereira@outlook.com" class="method-text method-link">mateus-ppereira@outlook.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contato-method">
+                            <div class="method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <h4 class="method-title">WhatsApp</h4>
+                                <a href="https://wa.me/5535992133545" target="_blank" class="method-text method-link">(35) 9 9213-3545</a>
+                            </div>
+                        </div>
+
+                        <div class="contato-method">
+                            <div class="method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <h4 class="method-title">Localização</h4>
+                                <p class="method-text">Pouso Alegre / MG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contato-form-wrapper">
+                    <form class="contato-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(00) 00000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao" class="form-label">Descreva seu Projeto</label>
+                            <textarea id="descricao" name="descricao" class="form-input form-textarea" rows="6" placeholder="Conte-nos sobre o serviço que você precisa (landing page, sistema de agendamento, e-commerce, etc.) e os detalhes do seu projeto..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Enviar Mensagem
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-text">Mateus</span>
+                        <span class="logo-subtitle">Dev</span>
+                    </a>
+                    <p class="footer-description">
+                        Desenvolvimento de soluções digitais com tecnologias modernas. 
+                        Transformando ideias em realidade através do código.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/dev-mateus" target="_blank" class="social-link" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Navegação</h4>
+                        <ul class="footer-list">
+                            <li><a href="#home" class="footer-link">Início</a></li>
+                            <li><a href="#servicos" class="footer-link">Serviços</a></li>
+                            <li><a href="#sobre" class="footer-link">Sobre</a></li>
+                            <li><a href="#contato" class="footer-link">Contato</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Serviços</h4>
+                        <ul class="footer-list">
+                            <li><a href="#contato" class="footer-link">Landing Pages</a></li>
+                            <li><a href="#contato" class="footer-link">Sistema Saúde</a></li>
+                            <li><a href="#contato" class="footer-link">Sistema Jurídico</a></li>
+                            <li><a href="#contato" class="footer-link">Desenvolvimento</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contato</h4>
+                        <ul class="footer-list">
+                            <li><a href="mailto:contato@seudominio.com" class="footer-link">Email</a></li>
+                            <li><a href="https://github.com/dev-mateus" class="footer-link">GitHub</a></li>
+                            <li><a href="#contato" class="footer-link">Formulário</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2026 Mateus Dev. Todos os direitos reservados.
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-link">Política de Privacidade</a>
+                    <a href="#" class="footer-link">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- JSON-LD Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Mateus Dev",
+        "description": "Desenvolvimento de Landing Pages de alta conversão e Sistemas de Agendamento para Saúde e Setor Jurídico",
+        "url": "https://seu-dominio.com",
+        "logo": "https://seu-dominio.com/logo.png",
+        "image": "https://seu-dominio.com/imagem.png",
+        "priceRange": "$$$",
+        "areaServed": "BR",
+        "availableLanguage": "pt-BR",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "telephone": "+55-35-99213-3545",
+            "email": "mateus-ppereira@outlook.com",
+            "availableLanguage": "pt-BR"
+        },
+        "sameAs": [
+            "https://github.com/dev-mateus",
+            "https://linkedin.com/in/seu-perfil"
+        ],
+        "hasOfferingDetails": [
+            {
+                "@type": "Offer",
+                "name": "Landing Pages de Alto Impacto",
+                "description": "Páginas otimizadas para conversão com design moderno"
+            },
+            {
+                "@type": "Offer",
+                "name": "Sistema de Agendamento - Saúde",
+                "description": "Plataforma completa para gestão de consultas médicas"
+            },
+            {
+                "@type": "Offer",
+                "name": "Sistema de Agendamento - Jurídico",
+                "description": "Solução especializada para escritórios de advocacia"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://seu-dominio.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Serviços",
+                "item": "https://seu-dominio.com/#servicos"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Sobre",
+                "item": "https://seu-dominio.com/#sobre"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Contato",
+                "item": "https://seu-dominio.com/#contato"
+            }
+        ]
+    }
+    </script>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

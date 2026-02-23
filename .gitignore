@@ -1,0 +1,26 @@
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependências (caso adicione Node.js no futuro)
+node_modules/
+package-lock.json
+
+# Build (caso use pré-processadores)
+dist/
+build/
+
+# Temporários
+*.tmp
+.cache/
