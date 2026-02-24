@@ -182,6 +182,30 @@ contactForm.addEventListener('submit', async (e) => {
 });
 
 // ========================================
+// MÁSCARA DE TELEFONE
+// ========================================
+
+const phoneInput = document.getElementById('phone');
+
+if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        if (value.length > 0) {
+            if (value.length <= 2) {
+                value = `(${value}`;
+            } else if (value.length <= 7) {
+                value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            } else {
+                value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7, 11)}`;
+            }
+        }
+        
+        e.target.value = value;
+    });
+}
+
+// ========================================
 // ANALYTICS E TRACKING
 // ========================================
 
