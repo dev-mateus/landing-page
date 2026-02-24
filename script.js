@@ -123,8 +123,13 @@ animateElements.forEach(el => {
 });
 
 // ========================================
-// FORMULÁRIO DE CONTATO
+// FORMULÁRIO DE CONTATO - EmailJS
 // ========================================
+
+// Inicializar EmailJS (você precisa substituir com sua Public Key)
+emailjs.init('YOUR_PUBLIC_KEY');
+
+const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -135,22 +140,22 @@ contactForm.addEventListener('submit', async (e) => {
         return;
     }
     
-    const formData = {
-        nome: document.getElementById('nome').value,
-        email: document.getElementById('email').value,
-        telefone: document.getElementById('telefone').value,
-        descricao: document.getElementById('descricao').value
-    };
-    
-    console.log('Form enviado:', formData);
-    
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     
     submitBtn.innerHTML = 'Enviando...';
     submitBtn.disabled = true;
     
-    setTimeout(() => {
+    try {
+        // Enviar email via EmailJS
+        const response = await emailjs.sendForm(
+            'SERVICE_ID',           // Substitua com seu Service ID
+            'TEMPLATE_ID',          // Substitua com seu Template ID
+            contactForm
+        );
+        
+        console.log('Email enviado com sucesso:', response);
+        
         submitBtn.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -164,7 +169,16 @@ contactForm.addEventListener('submit', async (e) => {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         }, 3000);
-    }, 1500);
+    } catch (error) {
+        console.error('Erro ao enviar email:', error);
+        
+        submitBtn.innerHTML = '❌ Erro ao enviar. Tente novamente.';
+        
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 3000);
+    }
 });
 
 // ========================================
