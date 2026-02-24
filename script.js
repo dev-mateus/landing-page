@@ -126,8 +126,8 @@ animateElements.forEach(el => {
 // FORMULÁRIO DE CONTATO - EmailJS
 // ========================================
 
-// Inicializar EmailJS (você precisa substituir com sua Public Key)
-emailjs.init('YOUR_PUBLIC_KEY');
+// Inicializar EmailJS
+emailjs.init('TBzsxpqvh6ARVzX5d');
 
 const contactForm = document.getElementById('contactForm');
 
@@ -149,8 +149,8 @@ contactForm.addEventListener('submit', async (e) => {
     try {
         // Enviar email via EmailJS
         const response = await emailjs.sendForm(
-            'SERVICE_ID',           // Substitua com seu Service ID
-            'TEMPLATE_ID',          // Substitua com seu Template ID
+            'service_dmscxzb',
+            'template_btiy2we',
             contactForm
         );
         
