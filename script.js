@@ -235,7 +235,7 @@ function initializeFormValidation() {
     if (messageInput) {
         messageInput.addEventListener('input', () => {
             const count = messageInput.value.length;
-            const countElement = document.getElementById('message-count');
+            const countElement = document.getElementById('message-count-value');
             const charCountElement = document.querySelector('.char-count');
             
             if (countElement) countElement.textContent = count;
@@ -332,7 +332,8 @@ contactForm.addEventListener('submit', async (e) => {
         });
         
         contactForm.reset();
-        document.getElementById('message-count').textContent = '0';
+        const messageCountValue = document.getElementById('message-count-value');
+        if (messageCountValue) messageCountValue.textContent = '0';
         
         setTimeout(() => {
             submitBtn.innerHTML = originalText;

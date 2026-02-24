@@ -280,37 +280,88 @@
                 </div>
 
                 <div class="contato-form-wrapper">
-                    <form class="contato-form" id="contactForm">
+                    <form class="contato-form" id="contactForm" novalidate>
                         <div class="form-group">
-                            <label for="from_name" class="form-label">Nome <span class="required">*</span></label>
-                            <input type="text" id="from_name" name="from_name" class="form-input" placeholder="Seu nome completo" minlength="3" maxlength="100" required>
-                            <span class="form-error" id="from_name-error"></span>
+                            <label for="from_name" class="form-label">
+                                Nome
+                                <span class="required" aria-label="obrigatório">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="from_name" 
+                                name="from_name" 
+                                class="form-input" 
+                                placeholder="João Silva"
+                                minlength="3" 
+                                maxlength="100" 
+                                required
+                                aria-required="true"
+                                aria-describedby="from_name-error">
+                            <span class="form-error" id="from_name-error" role="alert"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="email_id" class="form-label">Email <span class="required">*</span></label>
-                            <input type="email" id="email_id" name="email_id" class="form-input" placeholder="seu@email.com" maxlength="255" required>
-                            <span class="form-error" id="email_id-error"></span>
+                            <label for="email_id" class="form-label">
+                                Email
+                                <span class="required" aria-label="obrigatório">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email_id" 
+                                name="email_id" 
+                                class="form-input" 
+                                placeholder="voce@empresa.com"
+                                maxlength="255" 
+                                required
+                                aria-required="true"
+                                aria-describedby="email_id-error">
+                            <span class="form-error" id="email_id-error" role="alert"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone" class="form-label">Telefone</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(00) 00000-0000" maxlength="15" inputmode="numeric">
-                            <span class="form-error" id="phone-error"></span>
+                            <label for="phone" class="form-label">
+                                Telefone
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input" 
+                                placeholder="(35) 99213-3545"
+                                maxlength="15" 
+                                inputmode="numeric"
+                                aria-describedby="phone-error">
+                            <span class="form-error" id="phone-error" role="alert"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="message" class="form-label">Descreva seu Projeto <span class="required">*</span></label>
-                            <textarea id="message" name="message" class="form-input form-textarea" rows="6" placeholder="Conte-nos sobre o serviço que você precisa..." minlength="10" maxlength="5000" required></textarea>
+                            <label for="message" class="form-label">
+                                Descreva seu Projeto
+                                <span class="required" aria-label="obrigatório">*</span>
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-input form-textarea" 
+                                rows="4"
+                                placeholder="Conte-nos detalhes sobre o projeto, serviço necessário, cronograma, orçamento..." 
+                                minlength="10" 
+                                maxlength="5000" 
+                                required
+                                aria-required="true"
+                                aria-describedby="message-error message-count"></textarea>
                             <div class="form-helper">
-                                <span class="char-count"><span id="message-count">0</span>/5000</span>
-                                <span class="form-error" id="message-error"></span>
+                                <span class="char-count" id="message-count"><span id="message-count-value">0</span>/5000</span>
+                                <span class="form-error" id="message-error" role="alert"></span>
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-full">
+                        <button 
+                            type="submit" 
+                            class="btn btn-primary btn-full"
+                            aria-label="Enviar formulário de contato">
                             Enviar Mensagem
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </button>

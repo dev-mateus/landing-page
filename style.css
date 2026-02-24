@@ -1136,70 +1136,73 @@ section {
 
 /* Form */
 .contato-form-wrapper {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(16, 185, 129, 0.03) 100%);
-    padding: 32px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.04) 100%);
+    padding: 40px;
     border-radius: 20px;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(20px);
-    border: 1.5px solid rgba(99, 102, 241, 0.25);
+    border: 1.5px solid rgba(99, 102, 241, 0.3);
     background-clip: padding-box;
 }
 
 .contato-form {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 24px;
 }
 
 .form-group {
-    margin-bottom: 8px;
+    margin-bottom: 0;
 }
 
 .form-label {
     display: block;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     text-transform: none;
     letter-spacing: 0.2px;
     transition: var(--transition);
+    line-height: 1.4;
 }
 
 .form-label .required {
     color: var(--error);
-    margin-left: 2px;
+    margin-left: 3px;
+    font-weight: 700;
 }
 
 .form-input {
     width: 100%;
-    padding: 11px 14px;
-    border: 2px solid rgba(99, 102, 241, 0.25);
+    padding: 14px 16px;
+    border: 2px solid rgba(99, 102, 241, 0.35);
     border-radius: 12px;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.5;
     font-family: inherit;
     color: var(--text-primary);
-    background: rgba(10, 15, 26, 0.6);
+    background: rgba(15, 23, 42, 0.8);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
-}}}
+}
 
 .form-input::placeholder {
-    color: var(--text-muted);
+    color: rgba(148, 163, 184, 0.6);
     font-weight: 400;
 }
 
 .form-input:hover {
-    border-color: rgba(99, 102, 241, 0.5);
-    background: rgba(10, 15, 26, 0.8);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.6);
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
 }
 
 .form-input:focus {
     outline: none;
     border-color: var(--primary);
-    background: rgba(10, 15, 26, 0.9);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15), inset 0 0 0 1px rgba(99, 102, 241, 0.1);
+    background: rgba(15, 23, 42, 1);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2), inset 0 0 0 1px rgba(99, 102, 241, 0.15);
 }
 
 /* Estados de Validação */
@@ -1217,11 +1220,11 @@ section {
 .form-input.invalid:focus {
     border-color: var(--error);
     background: rgba(239, 68, 68, 0.12);
-    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15), inset 0 0 0 1px rgba(239, 68, 68, 0.1);
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2), inset 0 0 0 1px rgba(239, 68, 68, 0.15);
 }
 
 .form-input.valid {
-    border-color: var(--success);
+    border-color: rgba(16, 185, 129, 0.7);
     background: rgba(16, 185, 129, 0.08);
 }
 
@@ -1234,25 +1237,27 @@ section {
 .form-input.valid:focus {
     border-color: var(--success);
     background: rgba(16, 185, 129, 0.12);
-    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15), inset 0 0 0 1px rgba(16, 185, 129, 0.1);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2), inset 0 0 0 1px rgba(16, 185, 129, 0.15);
 }
 
 .form-error {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--error);
-    margin-top: 3px;
-    min-height: 16px;
+    margin-top: 6px;
+    min-height: 20px;
     animation: slideDown 0.3s ease;
     font-weight: 500;
+    line-height: 1.4;
 }
 
 .form-helper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3px;
-    font-size: 11px;
+    margin-top: 8px;
+    font-size: 12px;
+    gap: 12px;
 }
 
 .char-count {
@@ -1267,7 +1272,7 @@ section {
 
 .form-textarea {
     resize: vertical;
-    min-height: 95px;
+    min-height: 110px;
     max-height: 350px;
     font-family: inherit;
 }
