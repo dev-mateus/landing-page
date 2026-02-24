@@ -123,6 +123,143 @@ animateElements.forEach(el => {
 });
 
 // ========================================
+// VALIDAÇÃO DE FORMULÁRIO
+// ========================================
+
+const formValidations = {
+    from_name: {
+        validate: (value) => {
+            value = value.trim();
+            if (value.length === 0) return { valid: false, message: 'Nome é obrigatório' };
+            if (value.length < 3) return { valid: false, message: 'Nome deve ter no mínimo 3 caracteres' };
+            if (value.length > 100) return { valid: false, message: 'Nome não pode ter mais de 100 caracteres' };
+            if (!/^[a-záàâãéèêíïóôõöúçñ\s'-]+$/i.test(value)) return { valid: false, message: 'Nome contém caracteres inválidos' };
+            return { valid: true, message: '' };
+        }
+    },
+    email_id: {
+        validate: (value) => {
+            value = value.trim();
+            if (value.length === 0) return { valid: false, message: 'Email é obrigatório' };
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) return { valid: false, message: 'Email inválido' };
+            if (value.length > 255) return { valid: false, message: 'Email muito longo' };
+            return { valid: true, message: '' };
+        }
+    },
+    phone: {
+        validate: (value) => {
+            const cleaned = value.replace(/\D/g, '');
+            if (cleaned.length === 0) return { valid: true, message: '' }; // opcional
+            if (cleaned.length < 10) return { valid: false, message: 'Telefone deve ter no mínimo 10 dígitos' };
+            if (cleaned.length > 11) return { valid: false, message: 'Telefone inválido' };
+            return { valid: true, message: '' };
+        }
+    },
+    message: {
+        validate: (value) => {
+            value = value.trim();
+            if (value.length === 0) return { valid: false, message: 'Mensagem é obrigatória' };
+            if (value.length < 10) return { valid: false, message: 'Mensagem deve ter no mínimo 10 caracteres' };
+            if (value.length > 5000) return { valid: false, message: 'Mensagem não pode ter mais de 5000 caracteres' };
+            return { valid: true, message: '' };
+        }
+    }
+};
+
+function updateValidationUI(inputId, isValid) {
+    const input = document.getElementById(inputId);
+    const errorElement = document.getElementById(inputId + '-error');
+    
+    if (!input) return;
+    
+    input.classList.remove('invalid', 'valid');
+    if (errorElement) errorElement.textContent = '';
+    
+    if (isValid === null) {
+        // Sem validação realizada ainda
+        return;
+    }
+    
+    if (isValid) {
+        input.classList.add('valid');
+    } else {
+        input.classList.add('invalid');
+    }
+}
+
+function validateField(fieldId) {
+    const input = document.getElementById(fieldId);
+    if (!input) return true;
+    
+    const validation = formValidations[fieldId];
+    if (!validation) return true;
+    
+    const result = validation.validate(input.value);
+    const errorElement = document.getElementById(fieldId + '-error');
+    
+    if (!result.valid) {
+        if (errorElement) {
+            errorElement.textContent = result.message;
+        }
+        updateValidationUI(fieldId, false);
+        return false;
+    } else {
+        if (errorElement) {
+            errorElement.textContent = '';
+        }
+        updateValidationUI(fieldId, true);
+        return true;
+    }
+}
+
+function initializeFormValidation() {
+    Object.keys(formValidations).forEach(fieldId => {
+        const input = document.getElementById(fieldId);
+        if (!input) return;
+        
+        // Validação em tempo real
+        input.addEventListener('blur', () => {
+            validateField(fieldId);
+        });
+        
+        input.addEventListener('input', () => {
+            if (input.classList.contains('invalid')) {
+                validateField(fieldId);
+            }
+        });
+    });
+    
+    // Contador de caracteres para mensagem
+    const messageInput = document.getElementById('message');
+    if (messageInput) {
+        messageInput.addEventListener('input', () => {
+            const count = messageInput.value.length;
+            const countElement = document.getElementById('message-count');
+            const charCountElement = document.querySelector('.char-count');
+            
+            if (countElement) countElement.textContent = count;
+            
+            // Avisar quando está perto do limite
+            if (charCountElement) {
+                if (count > 4500) {
+                    charCountElement.classList.add('warning');
+                } else {
+                    charCountElement.classList.remove('warning');
+                }
+            }
+        });
+    }
+}
+
+// Inicializar validação quando DOM estiver pronto
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeFormValidation);
+} else {
+    initializeFormValidation();
+}
+
+// ========================================
 // NOTIFICAÇÃO TOAST
 // ========================================
 
@@ -149,9 +286,14 @@ const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Validação simples
-    if (!contactForm.checkValidity()) {
-        contactForm.reportValidity();
+    // Validar todos os campos obrigatórios
+    const isNameValid = validateField('from_name');
+    const isEmailValid = validateField('email_id');
+    const isPhoneValid = validateField('phone');
+    const isMessageValid = validateField('message');
+    
+    if (!isNameValid || !isEmailValid || !isPhoneValid || !isMessageValid) {
+        showNotification('⚠️ Por favor, corrija os erros no formulário', 'error', 4000);
         return;
     }
     
@@ -181,7 +323,16 @@ contactForm.addEventListener('submit', async (e) => {
             Mensagem Enviada!
         `;
         
+        // Limpar validações visuais
+        contactForm.querySelectorAll('.form-input').forEach(input => {
+            input.classList.remove('valid', 'invalid');
+        });
+        contactForm.querySelectorAll('.form-error').forEach(error => {
+            error.textContent = '';
+        });
+        
         contactForm.reset();
+        document.getElementById('message-count').textContent = '0';
         
         setTimeout(() => {
             submitBtn.innerHTML = originalText;
