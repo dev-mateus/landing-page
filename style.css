@@ -1148,11 +1148,11 @@ section {
 .contato-form {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 6px;
 }
 
 .form-group {
-    margin-bottom: 6px;
+    margin-bottom: 16px;
 }
 
 .form-label {
@@ -1173,7 +1173,7 @@ section {
 
 .form-input {
     width: 100%;
-    padding: 14px 18px;
+    padding: 16px 18px;
     border: 2px solid rgba(99, 102, 241, 0.25);
     border-radius: 12px;
     font-size: 15px;
@@ -1182,7 +1182,7 @@ section {
     background: rgba(10, 15, 26, 0.6);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
-}
+}}
 
 .form-input::placeholder {
     color: var(--text-muted);
