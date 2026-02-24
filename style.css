@@ -673,7 +673,7 @@ body {
 .btn-full {
     width: 100%;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 
 .contato-form .btn-primary {
@@ -1148,11 +1148,11 @@ section {
 .contato-form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
 }
 
 .form-group {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
 
 .form-label {
@@ -1160,7 +1160,7 @@ section {
     font-size: 13px;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     text-transform: none;
     letter-spacing: 0.2px;
     transition: var(--transition);
@@ -1241,7 +1241,7 @@ section {
     display: block;
     font-size: 12px;
     color: var(--error);
-    margin-top: 4px;
+    margin-top: 2px;
     min-height: 16px;
     animation: slideDown 0.3s ease;
     font-weight: 500;
@@ -1251,7 +1251,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 6px;
+    margin-top: 2px;
     font-size: 11px;
 }
 
