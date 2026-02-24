@@ -202,10 +202,12 @@ contactForm.addEventListener('submit', async (e) => {
 // MÁSCARA DE TELEFONE
 // ========================================
 
-const phoneInput = document.getElementById('phone');
-
-if (phoneInput) {
-    phoneInput.addEventListener('input', (e) => {
+function initPhoneMask() {
+    const phoneInput = document.getElementById('phone');
+    
+    if (!phoneInput) return;
+    
+    phoneInput.addEventListener('input', function(e) {
         let value = e.target.value.replace(/\D/g, '');
         
         // Limitar a 11 dígitos (máximo para telefone brasileiro)
@@ -213,6 +215,7 @@ if (phoneInput) {
             value = value.slice(0, 11);
         }
         
+        // Aplicar máscara
         if (value.length > 0) {
             if (value.length <= 2) {
                 value = `(${value}`;
@@ -227,6 +230,13 @@ if (phoneInput) {
     });
 }
 
+// Inicializar quando DOM estiver pronto
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPhoneMask);
+} else {
+    initPhoneMask();
+}
+
 // ========================================
 // ANALYTICS E TRACKING
 // ========================================
@@ -239,22 +249,7 @@ if (phoneInput) {
 // });
 
 // ========================================
-// FORMATO DE TELEFONE
-// ========================================
 
-const telefoneInput = document.getElementById('telefone');
-if (telefoneInput) {
-    telefoneInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, '');
-        
-        if (value.length <= 11) {
-            value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
-            e.target.value = value;
-        }
-    });
-}
-
-// ========================================
 // LAZY LOADING PARA IMAGENS (SE ADICIONAR)
 // ========================================
 
