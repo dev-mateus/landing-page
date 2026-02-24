@@ -63,6 +63,25 @@ body {
     overflow-x: hidden;
 }
 
+/* Skip to Content */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 9999;
+    padding: 12px 24px;
+    background: var(--primary);
+    color: var(--text-white);
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
 /* ========================================
    NOTIFICATION TOAST
 ======================================== */
@@ -334,7 +353,6 @@ body {
     margin-bottom: 28px;
     color: var(--text-primary);
     letter-spacing: -0.02em;
-    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -517,6 +535,7 @@ body {
     border-radius: 50%;
     opacity: 0.06;
     animation: float 20s infinite ease-in-out;
+    will-change: transform;
 }
 
 .shape-1 {
@@ -938,7 +957,7 @@ section {
 .sobre-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 60px;
     align-items: start;
 }
 
@@ -1018,11 +1037,10 @@ section {
 ======================================== */
 
 .contato {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    padding: var(--section-padding) 0;
     border-top: 1px solid rgba(99, 102, 241, 0.1);
 }
 
@@ -1245,10 +1263,14 @@ section {
     font-size: 13px;
     color: var(--error);
     margin-top: 6px;
-    min-height: 20px;
+    min-height: 0;
     animation: slideDown 0.3s ease;
     font-weight: 500;
     line-height: 1.4;
+}
+
+.form-error:empty {
+    display: none;
 }
 
 .form-helper {
@@ -1464,6 +1486,18 @@ section {
     }
 }
 
+/* Focus Visible for keyboard navigation */
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
+}
+
 @media (max-width: 1024px) {
     :root {
         --section-padding: 80px;
@@ -1471,7 +1505,6 @@ section {
     
     .hero-title {
         font-size: 48px;
-        min-height: 120px;
     }
     
     .section-title {
@@ -1534,7 +1567,6 @@ section {
     .hero-title {
         font-size: 36px;
         letter-spacing: -0.01em;
-        min-height: 95px;
     }
     
     .hero-description {
@@ -1588,7 +1620,6 @@ section {
 @media (max-width: 480px) {
     .hero-title {
         font-size: 32px;
-        min-height: 85px;
     }
     
     .section-title {

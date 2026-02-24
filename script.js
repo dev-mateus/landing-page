@@ -33,35 +33,37 @@ document.addEventListener('click', (e) => {
 });
 
 // ========================================
-// SCROLL HEADER
+// SCROLL HEADER & BACK TO TOP (combined)
 // ========================================
 
 const header = document.querySelector('.header');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-    
-    lastScroll = currentScroll;
-});
-
-// ========================================
-// BACK TO TOP
-// ========================================
-
 const backToTop = document.getElementById('backToTop');
+let lastScroll = 0;
+let ticking = false;
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 500) {
-        backToTop.classList.add('visible');
-    } else {
-        backToTop.classList.remove('visible');
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const currentScroll = window.pageYOffset;
+            
+            // Header scroll effect
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Back to top visibility
+            if (currentScroll > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+            
+            lastScroll = currentScroll;
+            ticking = false;
+        });
+        ticking = true;
     }
 });
 
@@ -278,8 +280,16 @@ function showNotification(message, type = 'success', duration = 4000) {
 // FORMULÁRIO DE CONTATO - EmailJS
 // ========================================
 
-// Inicializar EmailJS
-emailjs.init('TBzsxpqvh6ARVzX5d');
+// Inicializar EmailJS (com verificação para script defer)
+if (typeof emailjs !== 'undefined') {
+    emailjs.init('TBzsxpqvh6ARVzX5d');
+} else {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof emailjs !== 'undefined') {
+            emailjs.init('TBzsxpqvh6ARVzX5d');
+        }
+    });
+}
 
 const contactForm = document.getElementById('contactForm');
 
