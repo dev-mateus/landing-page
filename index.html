@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="https://dev-mateus.github.io/landing-page/og-image.png">
     <meta name="twitter:url" content="https://dev-mateus.github.io/landing-page/">
     <title>MNG Tech - Sistemas sob medida | Desenvolvimento Web</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='200' y2='200' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='16' y='16' width='168' height='168' rx='40' fill='url(%23g)'/%3E%3Cpath d='M56 138V68L100 100L144 68V138' fill='none' stroke='%23fff' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='lg' x1='0' y1='0' x2='200' y2='200'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='50,70 70,55 70,85' fill='url(%23lg)' opacity='0.9'/%3E%3Cpolygon points='50,130 70,115 70,145' fill='url(%23lg)' opacity='0.9'/%3E%3Cline x1='70' y1='55' x2='70' y2='145' stroke='url(%23lg)' stroke-width='16' stroke-linecap='round' opacity='0.9'/%3E%3Cpolygon points='150,70 130,55 130,85' fill='url(%23lg)'/%3E%3Cpolygon points='150,130 130,115 130,145' fill='url(%23lg)'/%3E%3Cline x1='130' y1='55' x2='130' y2='145' stroke='url(%23lg)' stroke-width='16' stroke-linecap='round'/%3E%3Cpolygon points='100,85 115,105 85,105' fill='url(%23lg)'/%3E%3Cline x1='70' y1='75' x2='100' y2='95' stroke='url(%23lg)' stroke-width='12' stroke-linecap='round'/%3E%3Cline x1='130' y1='75' x2='100' y2='95' stroke='url(%23lg)' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,13 +46,24 @@
                     <a href="#" class="logo">
                         <svg class="logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <defs>
-                                <linearGradient id="logoGrad1" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                                <linearGradient id="logoGrad" x1="0" y1="0" x2="200" y2="200">
                                     <stop offset="0%" stop-color="#6366f1"/>
                                     <stop offset="100%" stop-color="#a78bfa"/>
                                 </linearGradient>
                             </defs>
-                            <rect x="16" y="16" width="168" height="168" rx="40" fill="url(#logoGrad1)"/>
-                            <path d="M56 138 V68 L100 100 L144 68 V138" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Hexagon left -->
+                            <polygon points="50,70 70,55 70,85" fill="url(#logoGrad)" opacity="0.9"/>
+                            <polygon points="50,130 70,115 70,145" fill="url(#logoGrad)" opacity="0.9"/>
+                            <line x1="70" y1="55" x2="70" y2="145" stroke="url(#logoGrad)" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+                            <!-- Hexagon right -->
+                            <polygon points="150,70 130,55 130,85" fill="url(#logoGrad)"/>
+                            <polygon points="150,130 130,115 130,145" fill="url(#logoGrad)"/>
+                            <line x1="130" y1="55" x2="130" y2="145" stroke="url(#logoGrad)" stroke-width="16" stroke-linecap="round"/>
+                            <!-- Center arrow up -->
+                            <polygon points="100,85 115,105 85,105" fill="url(#logoGrad)"/>
+                            <!-- Connecting lines -->
+                            <line x1="70" y1="75" x2="100" y2="95" stroke="url(#logoGrad)" stroke-width="12" stroke-linecap="round"/>
+                            <line x1="130" y1="75" x2="100" y2="95" stroke="url(#logoGrad)" stroke-width="12" stroke-linecap="round"/>
                         </svg>
                         <span class="logo-text">MNG</span>
                         <span class="logo-subtitle">Tech</span>
@@ -394,13 +405,24 @@
                     <a href="#" class="footer-logo">
                         <svg class="logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <defs>
-                                <linearGradient id="logoGrad2" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                                <linearGradient id="logoGrad2" x1="0" y1="0" x2="200" y2="200">
                                     <stop offset="0%" stop-color="#6366f1"/>
                                     <stop offset="100%" stop-color="#a78bfa"/>
                                 </linearGradient>
                             </defs>
-                            <rect x="16" y="16" width="168" height="168" rx="40" fill="url(#logoGrad2)"/>
-                            <path d="M56 138 V68 L100 100 L144 68 V138" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Hexagon left -->
+                            <polygon points="50,70 70,55 70,85" fill="url(#logoGrad2)" opacity="0.9"/>
+                            <polygon points="50,130 70,115 70,145" fill="url(#logoGrad2)" opacity="0.9"/>
+                            <line x1="70" y1="55" x2="70" y2="145" stroke="url(#logoGrad2)" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+                            <!-- Hexagon right -->
+                            <polygon points="150,70 130,55 130,85" fill="url(#logoGrad2)"/>
+                            <polygon points="150,130 130,115 130,145" fill="url(#logoGrad2)"/>
+                            <line x1="130" y1="55" x2="130" y2="145" stroke="url(#logoGrad2)" stroke-width="16" stroke-linecap="round"/>
+                            <!-- Center arrow up -->
+                            <polygon points="100,85 115,105 85,105" fill="url(#logoGrad2)"/>
+                            <!-- Connecting lines -->
+                            <line x1="70" y1="75" x2="100" y2="95" stroke="url(#logoGrad2)" stroke-width="12" stroke-linecap="round"/>
+                            <line x1="130" y1="75" x2="100" y2="95" stroke="url(#logoGrad2)" stroke-width="12" stroke-linecap="round"/>
                         </svg>
                         <span class="logo-text">MNG</span>
                         <span class="logo-subtitle">Tech</span>
