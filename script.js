@@ -208,6 +208,11 @@ if (phoneInput) {
     phoneInput.addEventListener('input', (e) => {
         let value = e.target.value.replace(/\D/g, '');
         
+        // Limitar a 11 dígitos (máximo para telefone brasileiro)
+        if (value.length > 11) {
+            value = value.slice(0, 11);
+        }
+        
         if (value.length > 0) {
             if (value.length <= 2) {
                 value = `(${value}`;
