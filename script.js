@@ -123,6 +123,21 @@ animateElements.forEach(el => {
 });
 
 // ========================================
+// NOTIFICAÇÃO TOAST
+// ========================================
+
+function showNotification(message, type = 'success', duration = 4000) {
+    const toast = document.getElementById('notificationToast');
+    
+    toast.textContent = message;
+    toast.className = `notification-toast ${type} show`;
+    
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, duration);
+}
+
+// ========================================
 // FORMULÁRIO DE CONTATO - EmailJS
 // ========================================
 
@@ -156,6 +171,9 @@ contactForm.addEventListener('submit', async (e) => {
         
         console.log('Email enviado com sucesso:', response);
         
+        // Mostrar notificação de sucesso
+        showNotification('✓ Mensagem enviada com sucesso! Retornaremos em breve.', 'success', 5000);
+        
         submitBtn.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -172,12 +190,11 @@ contactForm.addEventListener('submit', async (e) => {
     } catch (error) {
         console.error('Erro ao enviar email:', error);
         
-        submitBtn.innerHTML = '❌ Erro ao enviar. Tente novamente.';
+        // Mostrar notificação de erro
+        showNotification('❌ Erro ao enviar. Por favor, tente novamente ou contate via WhatsApp.', 'error', 5000);
         
-        setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }, 3000);
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
     }
 });
 
