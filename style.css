@@ -752,6 +752,16 @@ section {
     font-weight: 600;
 }
 
+.servico-label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(99, 102, 241, 0.2);
+}
+
 .servico-icon {
     width: 60px;
     height: 60px;
@@ -780,6 +790,31 @@ section {
     color: var(--text-secondary);
     margin-bottom: 24px;
     line-height: 1.7;
+}
+
+.servico-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.benefit-item {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    background: rgba(99, 102, 241, 0.08);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.servico-card:hover .benefit-item {
+    background: rgba(99, 102, 241, 0.12);
+    border-color: rgba(99, 102, 241, 0.4);
 }
 
 .servico-features {
