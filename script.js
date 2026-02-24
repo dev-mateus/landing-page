@@ -97,30 +97,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========================================
-// ANIMAÇÃO AO SCROLL
+// ANIMAÇÃO AO SCROLL (melhorada com stagger)
 // ========================================
 
 const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -80px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -60px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            // Stagger animation para cards no mesmo grupo
+            const parent = entry.target.parentElement;
+            const siblings = parent ? Array.from(parent.children).filter(el => el.classList.contains('servico-card') || el.classList.contains('stat-card')) : [];
+            const index = siblings.indexOf(entry.target);
+            const delay = index >= 0 ? index * 100 : 0;
+            
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, delay);
+            
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
 // Elementos para animar
-const animateElements = document.querySelectorAll('.servico-card, .stat-card, .feature-item');
+const animateElements = document.querySelectorAll('.servico-card, .stat-card, .feature-item, .contato-method, .contato-form-wrapper, .contato-info');
 animateElements.forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
     observer.observe(el);
 });
 
