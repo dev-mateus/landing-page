@@ -673,7 +673,7 @@ body {
 .btn-full {
     width: 100%;
     justify-content: center;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .contato-form .btn-primary {
@@ -1148,11 +1148,11 @@ section {
 .contato-form {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
 .form-group {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .form-label {
@@ -1160,7 +1160,7 @@ section {
     font-size: 13px;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     text-transform: none;
     letter-spacing: 0.2px;
     transition: var(--transition);
@@ -1173,7 +1173,7 @@ section {
 
 .form-input {
     width: 100%;
-    padding: 16px 18px;
+    padding: 13px 16px;
     border: 2px solid rgba(99, 102, 241, 0.25);
     border-radius: 12px;
     font-size: 15px;
@@ -1241,7 +1241,7 @@ section {
     display: block;
     font-size: 12px;
     color: var(--error);
-    margin-top: 2px;
+    margin-top: 3px;
     min-height: 16px;
     animation: slideDown 0.3s ease;
     font-weight: 500;
@@ -1251,7 +1251,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2px;
+    margin-top: 3px;
     font-size: 11px;
 }
 
@@ -1267,7 +1267,7 @@ section {
 
 .form-textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 95px;
     max-height: 350px;
     font-family: inherit;
 }
